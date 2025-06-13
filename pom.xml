@@ -17,12 +17,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-<!--        <module>smsgw-common</module>-->
-<!--        <module>smsgw-security</module>-->
-<!--        <module>smsgw-general</module>-->
-<!--        <module>smsgw-controller</module>-->
-<!--        <module>smsgw-business</module>-->
-<!--        <module>smsgw-lookup</module>-->
         <module>huanshen-common</module>
         <module>huanshen-security</module>
         <module>huanshen-service</module>

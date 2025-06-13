@@ -98,7 +98,7 @@ public class CacheAspect {
         CacheUtil.evictCache(cacheGroup, cacheKey);
     }
 
-    @Around("@annotation(com.huanshen.scaffolding.smsgw.common.cache.annotations.CommonCachePut)")
+    @Around("@annotation(com.huanshen.scaffolding.common.cache.annotations.CommonCachePut)")
     public Object doBeforePut(ProceedingJoinPoint point) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) point.getSignature();
 

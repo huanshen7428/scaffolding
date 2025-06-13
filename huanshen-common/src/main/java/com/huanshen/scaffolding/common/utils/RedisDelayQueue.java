@@ -14,7 +14,7 @@ public class RedisDelayQueue {
 
     private RedissonClient redissonClient;
 
-    public static final String QUEUE_NAME = "smsgw:send:delay:queue";
+    public static final String QUEUE_NAME = "hs:send:delay:queue";
 
 
     public RedisDelayQueue() {
