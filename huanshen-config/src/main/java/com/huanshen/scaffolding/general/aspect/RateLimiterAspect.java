@@ -28,7 +28,7 @@ public class RateLimiterAspect {
 
     private final ConcurrentHashMap<String, RateLimiter> limiterMap = new ConcurrentHashMap<>();
 
-    @Around("@annotation(com.asiainfo.smsgw.common.ratelimiter.CommonRateLimiter)")
+    @Around("@annotation(com.huanshen.scaffolding.common.ratelimiter.CommonRateLimiter)")
     public Object doAroundIde(ProceedingJoinPoint point) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) point.getSignature();
 

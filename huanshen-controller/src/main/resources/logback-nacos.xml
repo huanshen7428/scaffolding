@@ -32,6 +32,7 @@
     <logger name="com.huanshen.scaffolding.business.user.mapper" level="DEBUG" />
 
     <root level="${log.level}">
+        <appender-ref ref="console"/>
         <appender-ref ref="rollingFileOut"/>
     </root>
 </configuration>

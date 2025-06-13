@@ -1,11 +1,11 @@
 server:
   port: 8701
-  #keytool -genkey -alias http2_smsgw -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -dname "CN=asiainfo, OU=asiainfo, O=asiainfo, L=Nanjing, ST=Nanjing, C=CN"
+  #keytool -genkey -alias http2_hs -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -dname "CN=asiainfo, OU=asiainfo, O=asiainfo, L=Nanjing, ST=Nanjing, C=CN"
   ssl:
     key-store: classpath:keystore.p12
     key-store-password: 123456
     key-store-type: PKCS12
-    key-alias: http2_smsgw
+    key-alias: http2_hs
   http2:
     enabled: true
 spring:
@@ -111,4 +111,4 @@ encryptAESKey: I3JhZG9ubGlu
 log:
   level: INFO
 logging:
-  config: classpath:logback-docker.xml
+  config: classpath:logback-nacos.xml

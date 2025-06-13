@@ -28,22 +28,22 @@ public class ScheduledConfig implements SchedulingConfigurer {
         int corePoolSize = 10;
         return new ScheduledThreadPoolExecutor(
                 corePoolSize,
-                new SmsgwThreadFactory(),
+                new SFThreadFactory(),
                 new ThreadPoolExecutor.CallerRunsPolicy()
         );
     }
 
-    private static class SmsgwThreadFactory implements ThreadFactory {
+    private static class SFThreadFactory implements ThreadFactory {
         private static final AtomicInteger poolNumber = new AtomicInteger(1);
         private final ThreadGroup group;
         private final AtomicInteger threadNumber = new AtomicInteger(1);
         private final String namePrefix;
 
-        SmsgwThreadFactory() {
+        SFThreadFactory() {
             SecurityManager s = System.getSecurityManager();
             group = (s != null) ? s.getThreadGroup() :
                     Thread.currentThread().getThreadGroup();
-            namePrefix = "smsgw-pool-" +
+            namePrefix = "scaffolding-pool-" +
                     poolNumber.getAndIncrement() +
                     "-thread-";
         }

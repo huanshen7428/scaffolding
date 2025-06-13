@@ -1,12 +1,10 @@
 package com.huanshen.scaffolding.business.user.impl;
 
-import com.alibaba.fastjson.JSONObject;
 import com.huanshen.scaffolding.business.user.IUserService;
 import com.huanshen.scaffolding.business.user.test.TUserInfo;
 import com.huanshen.scaffolding.business.user.test.TUserInfoMapper;
 import com.huanshen.scaffolding.common.dynamic.DataSource;
 import com.huanshen.scaffolding.common.dynamic.DataSourceType;
-import com.huanshen.scaffolding.security.constant.SecurityConsts;
 import com.huanshen.scaffolding.security.domain.LoginUser;
 import com.huanshen.scaffolding.security.utils.AesCipherUtils;
 import com.huanshen.scaffolding.security.utils.JwtUtils;
@@ -20,10 +18,10 @@ import java.util.concurrent.TimeUnit;
  * UserServiceImpl
  *
  */
-@Service
+//@Service
 public class UserServiceImpl implements IUserService {
-    @Autowired
-    private RedisTemplate<String, Object> redisTemplate;
+//    @Autowired
+//    private RedisTemplate<String, Object> redisTemplate;
     @Autowired
     private TUserInfoMapper userInfoMapper;
 
@@ -52,7 +50,7 @@ public class UserServiceImpl implements IUserService {
         loginUser.setIsOwner(true);
 
         //将用户信息LoginUser存入redis
-        redisTemplate.opsForValue().set(SecurityConsts.LOGIN_TOKEN_KEY + account, JSONObject.toJSONString(loginUser), expireTime, timeUnit);
+//        redisTemplate.opsForValue().set(SecurityConsts.LOGIN_TOKEN_KEY + account, JSONObject.toJSONString(loginUser), expireTime, timeUnit);
 
         return loginUser;
     }
