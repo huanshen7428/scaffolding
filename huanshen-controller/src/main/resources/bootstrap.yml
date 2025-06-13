@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: huanshen
+        group: DEFAULT_GROUP
+        file-extension: yaml
+  application:
+    name: huanshen-scaffolding

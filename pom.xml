@@ -21,6 +21,7 @@
         <module>huanshen-security</module>
         <module>huanshen-service</module>
         <module>huanshen-config</module>
+        <module>huanshen-controller</module>
     </modules>
 
     <properties>
